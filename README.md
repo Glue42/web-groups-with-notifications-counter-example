@@ -6,14 +6,17 @@ This is a template for creating a React Groups application for [**Glue42 Enterpr
 
 The Glue42 web groups are based on web technologies and allow for complete customization of the containing group frame and all elements of the different Glue42 Window types (flat, tab and HTML) that may be a part of it. To switch to the Glue42 web groups, use the "groupType" property in the stickywindows.json configuration file of Glue42 Enterprise located in the %LocalAppData%\Tick42\GlueDesktop\config folder:
 
+```json
 {
     "groupType": "Web"
 }
+```
 
 Your custom Web Group App, as every Glue42 enabled app, must have an app configuration file. By default, Glue42 Enterprise will search for an app registered with the name "glue42-web-group-application" and if one is available, will use it as the Web Group App. If no such app is found, the first available app definition of type "webGroup" will be used. Note that Glue42 Enterprise expects only one app definition for a Web Group App - i.e., one configuration file with "type" property set to "webGroup". If multiple Web Group App definitions are present, the first one will be used. Glue42 Enterprise comes with a Web Group App and a configuration file for it named webGroup.json and located in %LocalAppData%\Tick42\GlueDesktop\config\apps. Modify or replace this file with your own configuration file, or delete it, if your app configurations are stored at another location.
 
 The "type" property must be set to "webGroup":
 
+```json
 {
     "name": "web-group-app",
     "title": "Web Group App",
@@ -28,6 +31,7 @@ The "type" property must be set to "webGroup":
         }
     }
 }
+```
 
 The "url" property is required and must point to the location of your custom Web Group App.
 
@@ -45,6 +49,7 @@ The Notifications API is accessible through the glue.notifications object.
 
 To raise a notification from your app, use the raise() method of the API. The method accepts as an argument a required Glue42NotificationOptions object with settings for the notification you want to raise:
 
+```javascript
 const options = {
     title: "New Trade",
     body: "VOD.L: 23 shares sold @ $212.03",
@@ -58,6 +63,7 @@ const options = {
 
 // Raising a notification.
 const notification = await glue.notifications.raise(options);
+```
 
 ## Prerequisites
 
