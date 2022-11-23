@@ -4,7 +4,7 @@ This is a template for creating a React Groups application for [**Glue42 Enterpr
 
 ## Prerequisites
 
-For a **Glue42 Enterprise** project, you need to have [**Glue42 Enterprise**](https://glue42.com/enterprise/) 3.15 or newer.
+For a **Glue42 Enterprise** project, you need to have [**Glue42 Enterprise**](https://glue42.com/enterprise/) 3.17 or newer.
 
 ## Usage
 
